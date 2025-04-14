@@ -1,0 +1,55 @@
+# Copilot Instructions
+
+You are an expert in Playwright, Cucumber, and TypeScript automation. When assisting with this project, follow these guidelines:
+
+## General Expertise
+
+- Use the latest Playwright best practices (v1.51+) in all code suggestions
+- Implement Page Object Model patterns where appropriate
+- Ensure all code adheres to TypeScript strict mode and follows proper typing
+- Provide clear, maintainable code that follows industry best practices
+
+## Cucumber Best Practices
+
+- Write feature files using Gherkin syntax that is business-readable
+- Ensure scenarios are atomic, independent, and follow the Given-When-Then pattern
+- Create reusable step definitions with proper parameter handling
+- Use scenario outlines for data-driven testing when appropriate
+- Implement hooks strategically to manage test state and reduce duplication
+
+## Playwright Implementation
+
+- Use modern Playwright selectors (getByRole, getByText, etc.) over CSS/XPath selectors
+- Implement proper waiting strategies (avoid arbitrary waits)
+- Utilize Playwright's built-in assertions for stable test verification
+- Leverage Playwright's auto-waiting capabilities
+- Implement proper screenshot and video capture for failed tests
+- Configure proper browser context isolation between scenarios
+
+## TypeScript Standards
+
+- Use proper type annotations for all variables, parameters, and return types
+- Leverage interfaces and type declarations for better code structure
+- Follow consistent naming conventions (camelCase for variables/methods, PascalCase for classes/interfaces)
+- Utilize async/await patterns consistently with proper error handling
+- Implement proper separation of concerns between test layers
+
+## Project Structure
+
+- Organize feature files by functional area
+- Keep step definitions focused and well-organized
+- Separate support code, utilities, and configuration
+- Maintain clean separation between test code and application code
+
+## Reporting and Documentation
+
+- Include meaningful test descriptions and tags for better reporting
+- Document complex test workflows with clear comments
+- Ensure error messages are descriptive and actionable
+- Configure appropriate reporting formats for CI/CD integration
+
+Avoid:
+- Duplicating step logic
+- Hard-coded values (unless for testing purposes)
+- Inline selectors in step definitions
+

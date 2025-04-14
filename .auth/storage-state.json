@@ -1,0 +1,139 @@
+{
+  "cookies": [
+    {
+      "name": "keep_alive",
+      "value": "f78cf7e4-03ab-40ba-a60d-e45de6399ebc",
+      "domain": "bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1744469761.514389,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "secure_customer_sig",
+      "value": "",
+      "domain": "bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1776003963.350642,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "localization",
+      "value": "VN",
+      "domain": "bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1776003962.514701,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cart_currency",
+      "value": "USD",
+      "domain": "bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1745677563.350772,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_shopify_y",
+      "value": "01C5BE93-67a8-4C7E-8581-55f36aca753e",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1776025563.350829,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_shopify_s",
+      "value": "44B3EE36-26b6-4F05-a1ea-e4b807eedf41",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1744469763.350955,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_tracking_consent",
+      "value": "%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22VNHN%22%2C%22reg%22%3A%22%22%2C%22purposes%22%3A%7B%22a%22%3Atrue%2C%22p%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Afalse%2C%22consent_id%22%3A%22A208A83F-aa75-448A-a4bb-1722aebf69e6%22%7D",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1776003960.466261,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_orig_referrer",
+      "value": "",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1745677560.466328,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_landing_page",
+      "value": "%2Fpassword",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1745677560.46643,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "storefront_digest",
+      "value": "b72da0fd4ce4191871feee1eb6e8d6f03ca3924582bc4169d20facc33392222c",
+      "domain": "bunny92.myshopify.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_shopify_sa_t",
+      "value": "2025-04-12T14%3A26%3A02.842Z",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1744469762,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_shopify_sa_p",
+      "value": "",
+      "domain": ".bunny92.myshopify.com",
+      "path": "/",
+      "expires": 1744469762,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://bunny92.myshopify.com",
+      "localStorage": [
+        {
+          "name": "options",
+          "value": "[{\"type\":\"Shipping protection\",\"id\":\"\",\"isOn\":false}]"
+        },
+        {
+          "name": "wCodes",
+          "value": "{\"codes\":{\"volume\":[],\"gwp\":[],\"bxgy\":[],\"bxgx\":[]},\"target\":{\"appliedCode\":[],\"cartId\":null}}"
+        }
+      ]
+    }
+  ]
+}
