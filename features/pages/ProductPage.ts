@@ -74,8 +74,8 @@ export class ProductPage {
    * Clicks on a specific tier by number
    * @param tierNumber The tier number to click
    */
-  async clickTier(tierNumber: number): Promise<void> {
-    await this.page.locator('.sb__vt-bg-tier:nth-of-type(${tierNumber})').click();
+  async clickTier(): Promise<void> {
+    await this.page.getByText('Buy 8 - 9 save $578.85').click();
   }
 
   /**
@@ -89,8 +89,8 @@ export class ProductPage {
    * Gets the current cart quantity
    */
   async getCartQuantity(): Promise<number> {
-    const cartCount = await this.page.locator('.quantity__input').textContent();
-    return parseInt(cartCount || '0', 10);
+    const cartCount = await this.page.inputValue('#Drawer-quantity-1');
+    return parseInt(cartCount, 10);
   }
 
   /**

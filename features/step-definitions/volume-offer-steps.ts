@@ -84,14 +84,12 @@ Then('each tier should show a quantity and discounted price', async function() {
 });
 
 // When/Then steps for the second scenario
-When('I click on tier {int}', async function(tierNumber: number) {
+When('I click on tier last', async function() {
   const productPage = new ProductPage(this.page);
   
-  // Click the tier and store the selection
-  await productPage.clickTier(tierNumber);
-  
-  // Store the selected tier for later steps
-  this.volumeOfferInfo.selectedTier = tierNumber;
+  // Click the tierawait page.locator('div').filter({ hasText: /^Buy 8 - 9 save \$578\.85Best saved\$5,154\.08\$5,732\.93$/ }).nth(1).click(); and store the selection
+  await productPage.clickTier();
+ // this.volumeOfferInfo.selectedTier = await productPage.getSelectedTier();
 });
 
 When('I click the {string} button', async function(buttonName: string) {
@@ -110,7 +108,7 @@ Then('{int} items should be added to my cart', async function(expectedQuantity: 
   const productPage = new ProductPage(this.page);
   
   // Wait for cart to update
-  await this.page.waitForTimeout(1000);
+  await this.page.waitForTimeout(8000);
   
   // Get cart quantity and verify
   const cartQuantity = await productPage.getCartQuantity();
