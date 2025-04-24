@@ -13,6 +13,7 @@ Feature: Product Volume Offer Features
     And the volume offer table should display multiple tier options
     # And each tier should show a quantity and discounted price
 
+  @smoke
   Scenario: Selecting a tier and clicking "Grab deal now" adds correct quantity to cart
     When I click on tier last
     And I click the "Grab offer now" button

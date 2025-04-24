@@ -1,4 +1,7 @@
 import { Page } from '@playwright/test';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * Page Object Model for Product pages with volume offers
@@ -10,8 +13,8 @@ export class ProductPage {
    * Navigates to a specific product page
    * @param productUrl The URL of the product
    */
-  async navigateToProduct(productUrl: string): Promise<void> {
-    await this.page.goto(productUrl);
+  async navigateToProduct(): Promise<void> {
+    await this.page.goto(process.env.PRODUCT_URL || '' );
   }
 
   
@@ -75,7 +78,7 @@ export class ProductPage {
    * @param tierNumber The tier number to click
    */
   async clickTier(): Promise<void> {
-    await this.page.getByText('Buy 8 - 9 save $578.85').click();
+    await this.page.getByText(/Buy 8 - 9 /).click();
   }
 
   /**

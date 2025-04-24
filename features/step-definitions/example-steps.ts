@@ -15,7 +15,7 @@ interface ProductInfo {
 Given('I am on the Shopify store homepage', async function() {
   // Initialize product information storage
   this.productInfo = {} as Record<string, ProductInfo>;
-  await this.page.goto('https://bunny92.myshopify.com/');
+  await this.page.goto(process.env.SHOPIFY_URL);
 });
 
 When('I navigate to the first product page', async function() {

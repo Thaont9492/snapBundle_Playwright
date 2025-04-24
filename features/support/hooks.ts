@@ -3,12 +3,16 @@ import { chromium, firefox, webkit, Browser, BrowserContext, devices } from '@pl
 import fs from 'fs';
 import path from 'path';
 import { CustomWorld } from './world';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 // Configuration constants
 const STORAGE_STATE_PATH = path.join(__dirname, '../../.auth/storage-state.json');
-const SHOPIFY_URL = 'https://bunny92.myshopify.com/';
-const SHOPIFY_PASSWORD = '1234';
-const DEFAULT_TIMEOUT = 30000; // 30 seconds timeout
+const SHOPIFY_URL = process.env.SHOPIFY_URL || 'https://bunny92.myshopify.com/';
+const SHOPIFY_PASSWORD = process.env.SHOPIFY_PASSWORD || '1234';
+const DEFAULT_TIMEOUT = parseInt(process.env.DEFAULT_TIMEOUT || '30000'); // 30 seconds timeout
 const SCREENSHOTS_DIR = path.join(__dirname, '../../playwright-report/screenshots');
 
 // Set default timeout for all steps

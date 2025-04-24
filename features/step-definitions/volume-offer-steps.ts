@@ -1,15 +1,10 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { ProductPage } from '../pages/ProductPage';
+import dotenv from 'dotenv';
 
-/**
- * Step definitions for Product Volume Offer Features
- */
+dotenv.config();
 
-// Store product URLs centrally for easy maintenance
-const productUrls: Record<string, string> = {
-  '14k Dangling Pendant Earrings': 'https://bunny92.myshopify.com/products/14k-dangling-pendant-earrings-1'
-};
 
 // Background steps
 Given('I am logged in to the Shopify store', async function() {
@@ -17,7 +12,7 @@ Given('I am logged in to the Shopify store', async function() {
   // The hooks.ts file already sets up an authenticated session that's reused across all tests
   
   // Just navigate to the store homepage to confirm session works
-  await this.page.goto('https://bunny92.myshopify.com/', { waitUntil: 'networkidle' });
+  await this.page.goto(process.env.SHOPIFY_URL, { waitUntil: 'networkidle' });
   
   
 });
@@ -26,25 +21,12 @@ Given('I navigate to the {string} product page', async function(productName: str
   // Create product page instance
   const productPage = new ProductPage(this.page);
   
-  // Store the product for later use
-  if (!this.productInfo) {
-    this.productInfo = {};
+  if (productName === process.env.PRODUCT_NAME) {
+    await productPage.navigateToProduct();
+  }else {
+    //Handle other product names
+    await this.page.getByRole('link', { name: "14k Dangling Pendant Earrings" }).click();
   }
-  
-  this.productInfo[productName] = {
-    name: productName,
-    url: productUrls[productName] || ''
-  };
-  
-  this.currentProduct = productName;
-  
-  // Navigate to the product page
-  await productPage.navigateToProduct(productUrls[productName]);
-  
-  // Initialize volume offer info
-  this.volumeOfferInfo = {
-    selectedTier: ''
-  };
 });
 
 // Then steps for the first scenario

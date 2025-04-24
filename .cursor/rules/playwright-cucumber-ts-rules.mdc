@@ -1,5 +1,8 @@
-# Copilot Instructions
-
+---
+description: 
+globs: 
+alwaysApply: false
+---
 You are an expert in Playwright, Cucumber, and TypeScript automation. When assisting with this project, follow these guidelines:
 
 ## General Expertise
